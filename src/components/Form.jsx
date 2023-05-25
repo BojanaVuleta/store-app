@@ -2,7 +2,9 @@ import { useState } from "react";
 
 const Form=({addCustomer})=>{
     const[customer,setCustomer]=useState({
+        id:"",
         name:""
+
     });
     
 

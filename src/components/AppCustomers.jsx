@@ -1,22 +1,11 @@
-import { useState} from "react";
+
 import Form from "./Form";
+import { Link } from "react-router-dom";
 
-const AppCustomers=()=>{
 
-    const listOfCustomers=[{ name:'Bojana'},{name:'Marko'},{name:'Pera'}];
-    const[customers, setCustomers]=useState(listOfCustomers);
+const AppCustomers=({customers,onRemove, addCustomer})=>{
 
-    const onRemove=(name)=>{
-        setCustomers((prevState)=>prevState.filter((customer)=>customer.name !==name));
-
-    }
-
-    const addCustomer = (customer) => {
-
-        setCustomers([...customers, customer]);
-      };
-    
-
+   
     return(
         <div>
             <table>
@@ -32,6 +21,9 @@ const AppCustomers=()=>{
               <td>{customer.name}</td>
               <td>
                 <button onClick={()=>onRemove(customer.name)}>Remove</button>
+              </td>
+              <td>
+                <Link to={`/customers/${customer.id}`}>Latest Purchases</Link>
               </td>
             </tr>
           ))}
