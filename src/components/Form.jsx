@@ -25,7 +25,7 @@ const Form=({addCustomer})=>{
         <div>
             <form onSubmit={submitHandler}>
             <label htmlFor="name">Name</label>
-            <input onChange={handleInputChange} name="name" type="text" placeholder="Insert Customer Name"></input>
+            <input onChange={handleInputChange} value={customer.name} name="name" type="text" placeholder="Insert Customer Name"></input>
             <button type="submit">Add Customer</button>
             </form>
         </div>

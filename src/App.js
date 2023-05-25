@@ -14,7 +14,10 @@ function App() {
     { id: 3, name: "Pera", products: ["jagode"] },
   ];
 
+  
+
   const [customers, setCustomers] = useState(listOfCustomers);
+ 
 
   const onRemove = (name) => {
     setCustomers((prevState) =>
@@ -32,8 +35,7 @@ function App() {
     <div className="App">
       <Layout />
       <Routes>
-        <Route
-          path="/customers" element={<AppCustomers customers={listOfCustomers}onRemove={onRemove} addCustomer={addCustomer} /> }/>
+        <Route path="/customers" element={<AppCustomers customers={listOfCustomers}onRemove={onRemove} addCustomer={addCustomer} /> }/>
         <Route path="/products" element={<AppProducts />} />
         <Route path="/customers/:id" element={<LatestPurchases customers={listOfCustomers}/>} />
       </Routes>
