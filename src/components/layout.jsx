@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Layout=()=>{
     return(
 
- <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+ <nav class="navbar navbar-expand-lg bg-body-tertiary container " >
   <div class="container-fluid">
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
