@@ -1,14 +1,20 @@
-import { useState
- } from "react";
+import { useState} from "react";
+import Form from "./Form";
+
 const AppCustomers=()=>{
 
-    const listOfCustomers=['Bojana','Marko','Pera'];
+    const listOfCustomers=[{ name:'Bojana'},{name:'Marko'},{name:'Pera'}];
     const[customers, setCustomers]=useState(listOfCustomers);
 
     const onRemove=(name)=>{
-        setCustomers((prevState)=>prevState.filter((customer)=>customer !==name));
+        setCustomers((prevState)=>prevState.filter((customer)=>customer.name !==name));
 
     }
+
+    const addCustomer = (customer) => {
+
+        setCustomers([...customers, customer]);
+      };
     
 
     return(
@@ -17,21 +23,22 @@ const AppCustomers=()=>{
         <thead>
           <tr>
             <th>Name</th>
-
             <th>Remove option</th>
           </tr>
         </thead>
         <tbody>
           {customers.map((customer, index) => (
             <tr key={index}>
-              <td>{customer}</td>
+              <td>{customer.name}</td>
               <td>
-                <button onClick={()=>onRemove(customer)}>Remove</button>
+                <button onClick={()=>onRemove(customer.name)}>Remove</button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+      <Form addCustomer={addCustomer}/>
+      
         </div>
     )
 }

@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Layout from "./components/layout";
 
 function App() {
+
   return (
     <div className="App">
       <Layout />
