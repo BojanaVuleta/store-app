@@ -3,15 +3,17 @@ import { Link } from "react-router-dom";
 const Layout=()=>{
     return(
 
- <nav class="navbar navbar-expand-lg bg-body-tertiary container " >
-  <div class="container-fluid">
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-            <Link to="/customers"><button>Customers</button></Link>
+ <nav className= "navbar navbar-expand-lg bg-body-tertiary container" >
+  <div className="container-fluid">
+    <div className="collapse navbar-collapse" id="navbarNav">
+      <ul className="navbar-nav">
+        <li className="nav-item">
+            <Link to="/customers"><button className="btn btn-outline-secondary">Customers</button></Link>
         </li>
-        <li class="nav-item">
-            <Link to="/products"><button>Products</button></Link>
+  
+
+        <li className="nav-item">
+            <Link to="/products"><button className="btn btn-outline-secondary">Products</button></Link>
         </li>
         
       </ul>

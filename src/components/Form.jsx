@@ -24,9 +24,10 @@ const Form=({addCustomer})=>{
     return(
         <div>
             <form onSubmit={submitHandler}>
-            <label htmlFor="name">Name</label>
-            <input onChange={handleInputChange} value={customer.name} name="name" type="text" placeholder="Insert Customer Name"></input>
-            <button type="submit">Add Customer</button>
+            <label className="form-label" htmlFor="name">Name</label>
+            <input  className="form-control container"onChange={handleInputChange} value={customer.name} name="name" type="text" placeholder="Insert Customer Name"></input>
+            <br/>
+            <button className="btn btn-outline-success" type="submit">Add Customer</button>
             </form>
         </div>
     )

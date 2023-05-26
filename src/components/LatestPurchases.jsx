@@ -7,7 +7,7 @@ const LatestPurchases=({customers})=>{
     return (
         <div>
            <h1>Name: {customer.name}</h1>
-           <p>Products: {customer.products}</p>
+           <p>Products: {customer.products.join(', ')}</p>
 
         </div>
     )
